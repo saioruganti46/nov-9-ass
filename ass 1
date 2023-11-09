@@ -1,0 +1,15 @@
+class Solution:
+    def sai (self, n):
+        s=0
+        while n!=0:
+            r=n%10
+            n=n//10
+            s=s+r*r
+        return s
+    def isHappy(self,N):
+        while N>9:
+            N=self.sai(N)
+        if N==1 or N==7:
+            return 1 
+        else:
+            return 0
